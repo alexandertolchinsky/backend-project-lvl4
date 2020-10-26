@@ -5,7 +5,9 @@ import { fileURLToPath } from 'url';
 import { resolve, dirname } from 'path';
 import { readdirSync } from 'fs';
 import Rollbar from 'rollbar';
+import dotenv from 'dotenv';
 
+dotenv.config();
 /* eslint-disable no-underscore-dangle */
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
