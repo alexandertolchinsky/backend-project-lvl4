@@ -26,7 +26,8 @@
   "dependencies": {
     "fastify": "^3.7.0",
     "point-of-view": "^4.6.0",
-    "pug": "^3.0.0"
+    "pug": "^3.0.0",
+    "rollbar": "^2.19.4"
   },
   "type": "module"
 }
