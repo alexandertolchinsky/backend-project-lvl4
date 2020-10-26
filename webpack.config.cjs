@@ -5,4 +5,12 @@ module.exports = {
   output: {
     path: resolve(__dirname, 'dist', 'frontend'),
   },
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ['css-loader'],
+      },
+    ],
+  },
 };
