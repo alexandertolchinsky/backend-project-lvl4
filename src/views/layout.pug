@@ -1,0 +1,22 @@
+doctype html
+html(lang='ru' class='h-100')
+  head
+    meta(charset='utf-8')
+    meta(
+      name='viewport'
+      content='width=device-width'
+      initial-scale=1
+      shrink-to-fit='no'
+    )
+    title= 'Homepage'
+    link(rel='stylesheet' href='main.css')
+    script(src='main.js')
+  body(class='d-flex flex-column h-100')
+    div(class='d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm')
+      h5(class='my-0 mr-md-auto font-weight-normal') Менеджер задач
+    main(class='flex-shrink-0')
+      div(class='container')
+        block content
+    footer(class='footer mt-auto py-3 border-top')
+      div(class='container')
+        span(class='text-muted') &copy 2020
