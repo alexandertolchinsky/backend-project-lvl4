@@ -6,6 +6,7 @@ import { resolve, dirname } from 'path';
 import { readdirSync } from 'fs';
 import Rollbar from 'rollbar';
 import dotenv from 'dotenv';
+import fastifyStatic from 'fastify-static';
 
 dotenv.config();
 /* eslint-disable no-underscore-dangle */
@@ -45,9 +46,16 @@ const addRollbar = (app) => {
   });
 };
 
+const addFastifyStatic = (app) => {
+  app.register(fastifyStatic, {
+    root: resolve(__dirname, '..', 'dist', 'frontend'),
+  });
+};
+
 const application = fastify();
 setUpViews(application);
 addControllers(application);
 addRollbar(application);
+addFastifyStatic(application);
 
 export default application;
